@@ -1,0 +1,283 @@
+/* * {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  gap: 30px;
+  background-color: gray;
+  animation: colorchange 3s linear infinite;
+
+}
+
+.firstBox {
+  width: 50%;
+  height: 18%;
+  background-color: brown;
+  display: flex;
+  gap: 20px;
+  animation: rotate 5s alternate 350ms infinite;
+}
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.rotate {
+  animation: rotate 2s linear infinite;
+}
+
+
+.flip {
+  animation: flip 1s ease-in-out;
+}
+
+
+.firstBox div {
+  flex: 1;
+  background-color: rgb(255, 0, 0);
+  border-radius: 50%;
+  animation: colorchange 3s linear infinite;
+}
+
+.secondBox {
+  width: 100%;
+  height: 32%;
+  background-color: orangered;
+  animation: shake 5s alternate 350ms infinite;
+}
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+  20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+
+.shake {
+  animation: shake 0.5s;
+}
+
+
+@keyframes colorchange {
+  0% {
+    background-color: aqua;
+  }
+  50% {
+    background-color: blueviolet;
+  }
+  70% {
+    background-color: cadetblue;
+  }
+  100% {
+    background-color: blue;
+  }
+}
+
+.thirdBox {
+  width: 100%;
+  height: 32%;
+  background-color: brown;
+    display: flex; 
+  gap: 20px;
+}
+
+.thirdBox div {
+  flex: 1;
+  background-color: green;
+}
+
+.thirdBox div:hover {
+  animation: threebox 5s alternate 350ms 4;
+}
+
+@keyframes threebox {
+  0% {
+    transform: scale(1);
+    background-color: rgb(6, 252, 6);
+  }
+  20% {
+    transform: scale(1.2);
+    background-color: greenyellow;
+  }
+  40% {
+    transform: scale(1.4);
+    background-color: rgb(229, 253, 92);
+  }
+  60% {
+    transform: scale(1.6);
+    background-color: rgb(119, 119, 2);
+  }
+  80% {
+    transform: scale(1.4);
+    background-color: rgb(6, 252, 6);
+  }
+  100% {
+    transform: scale(1.2);
+    background-color: green;
+  }
+}
+
+.forthBox {
+  width: 100%;
+  height: 18%;
+  background-color: brown;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.forthBox div {
+  background-color: blue;
+  animation: swing 5s alternate 350ms infinite;
+}
+@keyframes swing {
+  20% { transform: rotate(15deg); }
+  40% { transform: rotate(-10deg); }
+  60% { transform: rotate(5deg); }
+  80% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+
+@media screen and (width <= 810px) {
+  .firstBox {
+    flex-direction: column;
+  }
+}
+
+@media screen and (width <= 810px) {
+  .thirdBox {
+    flex-direction: column;
+  }
+}
+
+@media screen and (width <= 810px) {
+  .forthBox {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (width <= 414px) {
+  .forthBox {
+    grid-template-columns: 1fr;
+  }
+  .forthBox div {
+    height: 50px;
+  }
+  .it {
+    display: none;
+  }
+}  */
+
+
+
+
+
+
+
+
+* {
+  padding: none;
+  margin: none;
+  box-sizing: border-box;
+}
+
+div {
+  width: 100%;
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  /* background-image: url(../public/vite.svg)   */
+    /* /* background-color: black; */
+}
+button {
+  width: 100px;
+  height: 30px;
+  background: blue;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+  /* display: none;
+  justify-content: center;
+  align-items: center; */
+ 
+}
+button:hover {
+  transform: scale(1.1);
+}
+/* 
+.cardContainer {
+  width: 80%;
+  height: 45%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardContainer2 {
+  width: 80%;
+  height: 45%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  width: 30%;
+  height: 100%;
+  background-image: url(../public/sony.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button {
+  width: 100px;
+  height: 30px;
+  background: blue;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  transform: scale(1.2);
+}
+
+.cardContainer :hover {
+  transform: scale(1.1);
+  transition: all 4s;
+}
+
+.card:hover {
+  background-image: url(../public/oneplus.jpeg);
+  animation: threebox 5s alternate 350ms 4;
+
+  button {
+    display: flex;
+    transition: all 4s;
+  }
+}
+
+.cardContainer2 :hover {
+  transform: scale(1.1);
+  transition: all 4s;
+} */
