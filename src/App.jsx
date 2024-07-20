@@ -14,8 +14,8 @@ const test = () => {
   return (
     <div>
       <h1>count: {count}</h1>
-      <button onClick={() => setCount(count+1)}>increase</button>
-      <button onClick={() => setCount(count-1)}>decrease</button>
+      <button onClick={() => setCount(count+1)}>Add</button>
+      <button onClick={() => setCount(count-1)}>Reduce</button>
     </div>
   )
 }
